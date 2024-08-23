@@ -1,0 +1,99 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "metadata": { 
+	"eventPayloadTypeAlias": 75
+  },
+  "title" : "sw.GameRoundWinningsAddedEvent",
+  "type" : "object",
+  "additionalProperties" : false,
+  "properties" : {
+    "seamlessWalletTransactionId" : {
+      "type" : "string"
+    },
+    "bonusMoneyDeltaInBaseCurrency" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "realMoneyDeltaInBaseCurrency" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "bonusMoneyDelta" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "realMoneyDelta" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "totalBalanceAfter" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "gId" : {
+      "type" : "string",
+      "description" : "Logical variable name: gameId"
+    },
+    "rma" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: realMoneyAmount"
+    },
+    "rba" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: realMoneyBalanceAfter"
+    },
+    "gtId" : {
+      "type" : "string",
+      "description" : "Logical variable name: gameTransactionId"
+    },
+    "id" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletId"
+    },
+    "rmabc" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: realMoneyAmountInBaseCurrency"
+    },
+    "bba" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: bonusMoneyBalanceAfter"
+    },
+    "grId" : {
+      "type" : "string",
+      "description" : "Logical variable name: gameRoundId"
+    },
+    "raa" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: requestedAdditionAmount"
+    },
+    "bmabc" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: bonusMoneyAmountInBaseCurrency"
+    },
+    "wra" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: wageringRequirementAfter"
+    },
+    "er" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: initialCurrencyExchangeRate"
+    },
+    "bma" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: bonusMoneyAmount"
+    },
+    "pid" : {
+      "type" : "string",
+      "description" : "Logical variable name: playerId"
+    }
+  },
+  "definitions" : {
+    "Cash" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "a" : {
+          "type" : "number"
+        },
+        "c" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

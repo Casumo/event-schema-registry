@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "metadata": { 
+	"eventPayloadTypeAlias": 11
+  },
+  "title" : "sw.DepositFailedEvent",
+  "type" : "object",
+  "additionalProperties" : false,
+  "properties" : {
+    "paymentTransactionId" : {
+      "type" : "string"
+    },
+    "id" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletId"
+    },
+    "ptId" : {
+      "type" : "string",
+      "description" : "Logical variable name: depositTransactionId"
+    },
+    "pid" : {
+      "type" : "string",
+      "description" : "Logical variable name: playerId"
+    },
+    "esc" : {
+      "type" : "string",
+      "description" : "Logical variable name: externalStatusCode"
+    }
+  }
+}

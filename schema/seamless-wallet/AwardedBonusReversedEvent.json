@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "metadata": { 
+	"eventPayloadTypeAlias": 35
+  },
+  "title" : "sw.AwardedBonusReversedEvent",
+  "type" : "object",
+  "additionalProperties" : false,
+  "properties" : {
+    "bonusMoneyDeltaInBaseCurrency" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "bonusMoneyDelta" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "totalBalanceAfter" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "wrd" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: wageringRequirementDelta"
+    },
+    "acl" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: automaticConversionLimit"
+    },
+    "wra" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: wageringRequirementAfter"
+    },
+    "babc" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: reversedBonusAmountInBaseCurrency"
+    },
+    "batId" : {
+      "type" : "string",
+      "description" : "Logical variable name: bonusAwardedTransactionId"
+    },
+    "rba" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: realMoneyBalanceAfter"
+    },
+    "bba" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: bonusMoneyBalanceAfter"
+    },
+    "swtId" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletTransactionId"
+    },
+    "id" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletId"
+    },
+    "ba" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: reversedBonusAmount"
+    },
+    "pid" : {
+      "type" : "string",
+      "description" : "Logical variable name: playerId"
+    }
+  },
+  "definitions" : {
+    "Cash" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "a" : {
+          "type" : "number"
+        },
+        "c" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

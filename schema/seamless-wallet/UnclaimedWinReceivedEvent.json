@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "metadata": { 
+	"eventPayloadTypeAlias": 45
+  },
+  "title" : "sw.UnclaimedWinReceivedEvent",
+  "type" : "object",
+  "additionalProperties" : false,
+  "properties" : {
+    "gId" : {
+      "type" : "string",
+      "description" : "Logical variable name: gameId"
+    },
+    "wa" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: winAmount"
+    },
+    "c" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletCurrency"
+    },
+    "grtId" : {
+      "type" : "string",
+      "description" : "Logical variable name: gameTransactionId"
+    },
+    "grId" : {
+      "type" : "string",
+      "description" : "Logical variable name: gameRoundId"
+    },
+    "id" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletId"
+    },
+    "jwa" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: jackpotWinAmount"
+    },
+    "egr" : {
+      "type" : "boolean",
+      "description" : "Logical variable name: endsGameRound"
+    },
+    "pid" : {
+      "type" : "string",
+      "description" : "Logical variable name: playerId"
+    }
+  },
+  "required" : [ "endsGameRound" ],
+  "definitions" : {
+    "Cash" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "a" : {
+          "type" : "number"
+        },
+        "c" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

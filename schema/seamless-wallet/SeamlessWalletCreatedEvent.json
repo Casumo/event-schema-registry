@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "metadata": { 
+	"eventPayloadTypeAlias": 23
+  },
+  "title" : "sw.SeamlessWalletCreatedEvent",
+  "type" : "object",
+  "additionalProperties" : false,
+  "properties" : {
+    "c" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletCurrency"
+    },
+    "id" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletId"
+    }
+  }
+}

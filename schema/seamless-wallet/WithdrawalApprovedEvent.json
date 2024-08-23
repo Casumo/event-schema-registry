@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "metadata": { 
+	"eventPayloadTypeAlias": 29
+  },
+  "title" : "sw.WithdrawalApprovedEvent",
+  "type" : "object",
+  "additionalProperties" : false,
+  "properties" : {
+    "paymentTransactionId" : {
+      "type" : "string"
+    },
+    "req" : {
+      "type" : "string",
+      "description" : "Logical variable name: requestedBy"
+    },
+    "wa" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: withdrawalAmount"
+    },
+    "wabc" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: withdrawalAmountInBaseCurrency"
+    },
+    "ptId" : {
+      "type" : "string",
+      "description" : "Logical variable name: withdrawalTransactionId"
+    },
+    "elapc" : {
+      "type" : "boolean",
+      "description" : "Logical variable name: excludeLimitsAndPermissionsCheck"
+    },
+    "id" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletId"
+    },
+    "ep" : {
+      "type" : "string",
+      "description" : "Logical variable name: executionProvider"
+    },
+    "pid" : {
+      "type" : "string",
+      "description" : "Logical variable name: playerId"
+    }
+  },
+  "required" : [ "excludeLimitsAndPermissionsCheck" ],
+  "definitions" : {
+    "Cash" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "a" : {
+          "type" : "number"
+        },
+        "c" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

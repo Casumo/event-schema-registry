@@ -1,0 +1,84 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "metadata": { 
+	"eventPayloadTypeAlias": 50
+  },
+  "title" : "sw.GameRoundAdjustedEvent",
+  "type" : "object",
+  "additionalProperties" : false,
+  "properties" : {
+    "seamlessWalletTransactionId" : {
+      "type" : "string"
+    },
+    "gId" : {
+      "type" : "string",
+      "description" : "Logical variable name: gameId"
+    },
+    "r" : {
+      "type" : "string",
+      "description" : "Logical variable name: reason"
+    },
+    "rmba" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: realMoneyBalanceAfter"
+    },
+    "grtId" : {
+      "type" : "string",
+      "description" : "Logical variable name: gameTransactionId"
+    },
+    "bmba" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: bonusMoneyBalanceAfter"
+    },
+    "grId" : {
+      "type" : "string",
+      "description" : "Logical variable name: gameRoundId"
+    },
+    "id" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletId"
+    },
+    "bmdbc" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: bonusMoneyDeltaInBaseCurrency"
+    },
+    "bmd" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: bonusMoneyDelta"
+    },
+    "rdbc" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: realMoneyDeltaInBaseCurrency"
+    },
+    "rmd" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: realMoneyDelta"
+    },
+    "wra" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: wageringRequirementAfter"
+    },
+    "tba" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: totalBalanceAfter"
+    },
+    "pId" : {
+      "type" : "string",
+      "description" : "Logical variable name: playerId"
+    }
+  },
+  "definitions" : {
+    "Cash" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "a" : {
+          "type" : "number"
+        },
+        "c" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

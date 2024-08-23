@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "metadata": { 
+	"eventPayloadTypeAlias": 53
+  },
+  "title" : "sw.AmountContributedToWageringRequirementEvent",
+  "type" : "object",
+  "additionalProperties" : false,
+  "properties" : {
+    "wrd" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: wageringRequirementDelta"
+    },
+    "gId" : {
+      "type" : "string",
+      "description" : "Logical variable name: gameId"
+    },
+    "ctId" : {
+      "type" : "string",
+      "description" : "Logical variable name: contributingTransactionId"
+    },
+    "wra" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: wageringRequirementAfter"
+    },
+    "rmba" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: realMoneyBalanceAfter"
+    },
+    "er" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: initialCurrencyExchangeRate"
+    },
+    "swtId" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletTransactionId"
+    },
+    "bmba" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: bonusMoneyBalanceAfter"
+    },
+    "id" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletId"
+    },
+    "grId" : {
+      "type" : "string",
+      "description" : "Logical variable name: gameRoundId"
+    },
+    "pId" : {
+      "type" : "string",
+      "description" : "Logical variable name: playerId"
+    }
+  },
+  "definitions" : {
+    "Cash" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "a" : {
+          "type" : "number"
+        },
+        "c" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

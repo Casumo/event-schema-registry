@@ -1,0 +1,102 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "metadata": { 
+	"eventPayloadTypeAlias": 2
+  },
+  "title" : "sw.BonusAwardedEvent",
+  "type" : "object",
+  "additionalProperties" : false,
+  "properties" : {
+    "bonusMoneyDeltaInBaseCurrency" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "bonusMoneyDelta" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "totalBalanceAfter" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "gId" : {
+      "type" : "string",
+      "description" : "Logical variable name: gameId"
+    },
+    "wrd" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: wageringRequirementDelta"
+    },
+    "r" : {
+      "type" : "string",
+      "description" : "Logical variable name: reason"
+    },
+    "rba" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: realMoneyBalanceAfter"
+    },
+    "swtId" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletTransactionId"
+    },
+    "bba" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: bonusMoneyBalanceAfter"
+    },
+    "id" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletId"
+    },
+    "babc" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: bonusAmountInBaseCurrency"
+    },
+    "bo" : {
+      "$ref" : "#/definitions/BonusOriginInfo",
+      "description" : "Logical variable name: bonusOrigin"
+    },
+    "acl" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: automaticConversionLimit"
+    },
+    "be" : {
+      "type" : "number",
+      "description" : "Logical variable name: bonusExpiryTime"
+    },
+    "wra" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: wageringRequirementAfter"
+    },
+    "ba" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: bonusAmount"
+    },
+    "pid" : {
+      "type" : "string",
+      "description" : "Logical variable name: playerId"
+    }
+  },
+  "definitions" : {
+    "Cash" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "a" : {
+          "type" : "number"
+        },
+        "c" : {
+          "type" : "string"
+        }
+      }
+    },
+    "BonusOriginInfo" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "origin" : {
+          "type" : "string"
+        },
+        "id" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

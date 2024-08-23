@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "metadata": { 
+	"eventPayloadTypeAlias": 43
+  },
+  "title" : "sw.WithdrawalsUnblockedEvent",
+  "type" : "object",
+  "additionalProperties" : false,
+  "properties" : {
+    "r" : {
+      "type" : "string",
+      "description" : "Logical variable name: reason"
+    },
+    "id" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletId"
+    },
+    "s" : {
+      "type" : "string",
+      "description" : "Logical variable name: source"
+    },
+    "pid" : {
+      "type" : "string",
+      "description" : "Logical variable name: playerId"
+    }
+  }
+}

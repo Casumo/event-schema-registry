@@ -1,0 +1,110 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "metadata": { 
+	"eventPayloadTypeAlias": 0
+  },
+  "title" : "sw.BetPlacedEvent",
+  "type" : "object",
+  "additionalProperties" : false,
+  "properties" : {
+    "wageringRequirementDelta" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "seamlessWalletTransactionId" : {
+      "type" : "string"
+    },
+    "bonusMoneyDeltaInBaseCurrency" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "realMoneyDeltaInBaseCurrency" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "bonusMoneyDelta" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "realMoneyDelta" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "totalBalanceAfter" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "gId" : {
+      "type" : "string",
+      "description" : "Logical variable name: gameId"
+    },
+    "bbbc" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: bonusBetAmountInBaseCurrency"
+    },
+    "aw" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: amountWagered"
+    },
+    "rba" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: realMoneyBalanceAfter"
+    },
+    "grtId" : {
+      "type" : "string",
+      "description" : "Logical variable name: gameTransactionId"
+    },
+    "bba" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: bonusMoneyBalanceAfter"
+    },
+    "id" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletId"
+    },
+    "grId" : {
+      "type" : "string",
+      "description" : "Logical variable name: gameRoundId"
+    },
+    "rb" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: realBetAmount"
+    },
+    "jcbc" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: jackpotContributionInBaseCurrency"
+    },
+    "b" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: betAmount"
+    },
+    "jc" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: jackpotContribution"
+    },
+    "wra" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: wageringRequirementAfter"
+    },
+    "bb" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: bonusBetAmount"
+    },
+    "rbbc" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: realBetAmountInBaseCurrency"
+    },
+    "pid" : {
+      "type" : "string",
+      "description" : "Logical variable name: playerId"
+    }
+  },
+  "definitions" : {
+    "Cash" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "a" : {
+          "type" : "number"
+        },
+        "c" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "metadata": { 
+	"eventPayloadTypeAlias": null
+  },
+  "title" : "sw.RealBalanceAffectingEvent",
+  "type" : "object",
+  "additionalProperties" : false,
+  "properties" : {
+    "realMoneyBalanceAfter" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "realMoneyDeltaInBaseCurrency" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "realMoneyDelta" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "bonusMoneyBalanceAfter" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "wageringRequirementAfter" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "seamlessWalletTransactionId" : {
+      "type" : "string"
+    },
+    "playerId" : {
+      "type" : "string"
+    },
+    "totalBalanceAfter" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "seamlessWalletId" : {
+      "type" : "string"
+    }
+  },
+  "definitions" : {
+    "Cash" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "a" : {
+          "type" : "number"
+        },
+        "c" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

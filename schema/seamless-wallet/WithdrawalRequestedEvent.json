@@ -1,0 +1,89 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "metadata": { 
+	"eventPayloadTypeAlias": 33
+  },
+  "title" : "sw.WithdrawalRequestedEvent",
+  "type" : "object",
+  "additionalProperties" : false,
+  "properties" : {
+    "seamlessWalletTransactionId" : {
+      "type" : "string"
+    },
+    "realMoneyDeltaInBaseCurrency" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "realMoneyDelta" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "totalBalanceAfter" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "fbc" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: feeInBaseCurrency"
+    },
+    "wabc" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: withdrawalAmountInBaseCurrency"
+    },
+    "rba" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: realMoneyBalanceAfter"
+    },
+    "f" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: fee"
+    },
+    "id" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletId"
+    },
+    "bba" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: bonusMoneyBalanceAfter"
+    },
+    "req" : {
+      "type" : "string",
+      "description" : "Logical variable name: requestedBy"
+    },
+    "p" : {
+      "type" : "string",
+      "description" : "Logical variable name: provider"
+    },
+    "wra" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: wageringRequirementAfter"
+    },
+    "wa" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: withdrawalAmount"
+    },
+    "ptId" : {
+      "type" : "string",
+      "description" : "Logical variable name: withdrawalTransactionId"
+    },
+    "pmId" : {
+      "type" : "string",
+      "description" : "Logical variable name: paymentMethodId"
+    },
+    "pid" : {
+      "type" : "string",
+      "description" : "Logical variable name: playerId"
+    }
+  },
+  "definitions" : {
+    "Cash" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "a" : {
+          "type" : "number"
+        },
+        "c" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

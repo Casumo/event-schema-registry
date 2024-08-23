@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "metadata": { 
+	"eventPayloadTypeAlias": 54
+  },
+  "title" : "sw.RealMoneyAwardedEvent",
+  "type" : "object",
+  "additionalProperties" : false,
+  "properties" : {
+    "totalBalanceAfter" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "r" : {
+      "type" : "string",
+      "description" : "Logical variable name: reason"
+    },
+    "rmd" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: realMoneyDelta"
+    },
+    "rdbc" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: realMoneyDeltaInBaseCurrency"
+    },
+    "wra" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: wageringRequirementAfter"
+    },
+    "rba" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: realMoneyBalanceAfter"
+    },
+    "oi" : {
+      "$ref" : "#/definitions/RealMoneyOriginInfo",
+      "description" : "Logical variable name: originInfo"
+    },
+    "id" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletId"
+    },
+    "bba" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: bonusMoneyBalanceAfter"
+    },
+    "swtId" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletTransactionId"
+    },
+    "pId" : {
+      "type" : "string",
+      "description" : "Logical variable name: playerId"
+    }
+  },
+  "definitions" : {
+    "Cash" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "a" : {
+          "type" : "number"
+        },
+        "c" : {
+          "type" : "string"
+        }
+      }
+    },
+    "RealMoneyOriginInfo" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "origin" : {
+          "type" : "string"
+        },
+        "id" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

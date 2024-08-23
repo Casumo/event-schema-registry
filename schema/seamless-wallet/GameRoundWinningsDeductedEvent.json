@@ -1,0 +1,99 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "metadata": { 
+	"eventPayloadTypeAlias": 73
+  },
+  "title" : "sw.GameRoundWinningsDeductedEvent",
+  "type" : "object",
+  "additionalProperties" : false,
+  "properties" : {
+    "seamlessWalletTransactionId" : {
+      "type" : "string"
+    },
+    "bonusMoneyDeltaInBaseCurrency" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "realMoneyDeltaInBaseCurrency" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "bonusMoneyDelta" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "realMoneyDelta" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "totalBalanceAfter" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "gId" : {
+      "type" : "string",
+      "description" : "Logical variable name: gameId"
+    },
+    "rba" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: realMoneyBalanceAfter"
+    },
+    "gtId" : {
+      "type" : "string",
+      "description" : "Logical variable name: gameTransactionId"
+    },
+    "bba" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: bonusMoneyBalanceAfter"
+    },
+    "grId" : {
+      "type" : "string",
+      "description" : "Logical variable name: gameRoundId"
+    },
+    "id" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletId"
+    },
+    "rmdabc" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: realMoneyDeductionAmountInBaseCurrency"
+    },
+    "rmda" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: realMoneyDeductionAmount"
+    },
+    "wra" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: wageringRequirementAfter"
+    },
+    "er" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: initialCurrencyExchangeRate"
+    },
+    "bmdabc" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: bonusMoneyDeductionAmountInBaseCurrency"
+    },
+    "bmda" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: bonusMoneyDeductionAmount"
+    },
+    "pid" : {
+      "type" : "string",
+      "description" : "Logical variable name: playerId"
+    },
+    "rda" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: requestedDeductionAmount"
+    }
+  },
+  "definitions" : {
+    "Cash" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "a" : {
+          "type" : "number"
+        },
+        "c" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

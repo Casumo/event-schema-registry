@@ -1,0 +1,89 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "metadata": { 
+	"eventPayloadTypeAlias": 13
+  },
+  "title" : "sw.GameRoundEndedEvent",
+  "type" : "object",
+  "additionalProperties" : false,
+  "properties" : {
+    "gameRoundWon" : {
+      "type" : "boolean"
+    },
+    "gId" : {
+      "type" : "string",
+      "description" : "Logical variable name: gameId"
+    },
+    "tjw" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: totalJackpotWin"
+    },
+    "tbabc" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: totalBetAmountInBaseCurrency"
+    },
+    "grtId" : {
+      "type" : "string",
+      "description" : "Logical variable name: gameTransactionId"
+    },
+    "id" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletId"
+    },
+    "grId" : {
+      "type" : "string",
+      "description" : "Logical variable name: gameRoundId"
+    },
+    "tbba" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: totalBonusBetAmount"
+    },
+    "twabc" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: totalWinAmountInBaseCurrency"
+    },
+    "trba" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: totalRealBetAmount"
+    },
+    "twa" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: totalWinAmount"
+    },
+    "tjc" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: totalJackpotContribution"
+    },
+    "trwa" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: totalRealWinAmount"
+    },
+    "tba" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: totalBetAmount"
+    },
+    "tbwa" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: totalBonusWinAmount"
+    },
+    "pid" : {
+      "type" : "string",
+      "description" : "Logical variable name: playerId"
+    }
+  },
+  "required" : [ "gameRoundWon" ],
+  "definitions" : {
+    "Cash" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "a" : {
+          "type" : "number"
+        },
+        "c" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

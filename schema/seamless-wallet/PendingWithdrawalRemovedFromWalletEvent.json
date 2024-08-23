@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "metadata": { 
+	"eventPayloadTypeAlias": 52
+  },
+  "title" : "sw.PendingWithdrawalRemovedFromWalletEvent",
+  "type" : "object",
+  "additionalProperties" : false,
+  "properties" : {
+    "ptId" : {
+      "type" : "string",
+      "description" : "Logical variable name: withdrawalTransactionId"
+    },
+    "id" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletId"
+    },
+    "pId" : {
+      "type" : "string",
+      "description" : "Logical variable name: playerId"
+    }
+  }
+}

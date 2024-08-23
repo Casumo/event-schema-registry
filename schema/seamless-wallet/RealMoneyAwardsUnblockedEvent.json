@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "metadata": { 
+	"eventPayloadTypeAlias": 71
+  },
+  "title" : "sw.RealMoneyAwardsUnblockedEvent",
+  "type" : "object",
+  "additionalProperties" : false,
+  "properties" : {
+    "r" : {
+      "type" : "string",
+      "description" : "Logical variable name: reason"
+    },
+    "in" : {
+      "type" : "string",
+      "description" : "Logical variable name: initiator"
+    },
+    "id" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletId"
+    },
+    "pid" : {
+      "type" : "string",
+      "description" : "Logical variable name: playerId"
+    }
+  }
+}

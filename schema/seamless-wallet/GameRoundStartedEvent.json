@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "metadata": { 
+	"eventPayloadTypeAlias": 15
+  },
+  "title" : "sw.GameRoundStartedEvent",
+  "type" : "object",
+  "additionalProperties" : false,
+  "properties" : {
+    "rmr" : {
+      "type" : "boolean",
+      "description" : "Logical variable name: realMoneyPlayRequired"
+    },
+    "gId" : {
+      "type" : "string",
+      "description" : "Logical variable name: gameId"
+    },
+    "c" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletCurrency"
+    },
+    "grId" : {
+      "type" : "string",
+      "description" : "Logical variable name: gameRoundId"
+    },
+    "id" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletId"
+    },
+    "gwf" : {
+      "type" : "number",
+      "description" : "Logical variable name: gameWageringFactor"
+    },
+    "pId" : {
+      "type" : "string",
+      "description" : "Logical variable name: playerId"
+    }
+  },
+  "required" : [ "realMoneyPlayRequired" ]
+}

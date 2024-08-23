@@ -1,0 +1,133 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "metadata": { 
+	"eventPayloadTypeAlias": 27
+  },
+  "title" : "sw.WinReceivedEvent",
+  "type" : "object",
+  "additionalProperties" : false,
+  "properties" : {
+    "seamlessWalletTransactionId" : {
+      "type" : "string"
+    },
+    "bonusMoneyDeltaInBaseCurrency" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "realMoneyDeltaInBaseCurrency" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "bonusMoneyDelta" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "realMoneyDelta" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "totalBalanceAfter" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "gId" : {
+      "type" : "string",
+      "description" : "Logical variable name: gameId"
+    },
+    "rs" : {
+      "type" : "string",
+      "description" : "Logical variable name: reason"
+    },
+    "wa" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: winAmount"
+    },
+    "rba" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: realMoneyBalanceAfter"
+    },
+    "grtId" : {
+      "type" : "string",
+      "description" : "Logical variable name: gameTransactionId"
+    },
+    "grId" : {
+      "type" : "string",
+      "description" : "Logical variable name: gameRoundId"
+    },
+    "rwa" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: realMoneyWin"
+    },
+    "bba" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: bonusMoneyBalanceAfter"
+    },
+    "id" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletId"
+    },
+    "jwdistr" : {
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/definitions/JackpotWinDistribution"
+      },
+      "description" : "Logical variable name: jackpotWinDistributions"
+    },
+    "jwabc" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: jackpotWinAmountInBaseCurrency"
+    },
+    "rwabc" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: realMoneyWinInBaseCurrency"
+    },
+    "wra" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: wageringRequirementAfter"
+    },
+    "bwa" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: bonusMoneyWin"
+    },
+    "er" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: initialCurrencyExchangeRate"
+    },
+    "jwa" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: jackpotWinAmount"
+    },
+    "bwabc" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: bonusMoneyWinInBaseCurrency"
+    },
+    "pid" : {
+      "type" : "string",
+      "description" : "Logical variable name: playerId"
+    }
+  },
+  "definitions" : {
+    "Cash" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "a" : {
+          "type" : "number"
+        },
+        "c" : {
+          "type" : "string"
+        }
+      }
+    },
+    "JackpotWinDistribution" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "eid" : {
+          "type" : "string"
+        },
+        "en" : {
+          "type" : "string"
+        },
+        "wa" : {
+          "$ref" : "#/definitions/Cash"
+        }
+      }
+    }
+  }
+}

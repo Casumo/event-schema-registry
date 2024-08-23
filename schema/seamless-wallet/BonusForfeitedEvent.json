@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "metadata": { 
+	"eventPayloadTypeAlias": 8
+  },
+  "title" : "sw.BonusForfeitedEvent",
+  "type" : "object",
+  "additionalProperties" : false,
+  "properties" : {
+    "bonusMoneyBalanceAfter" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "bonusMoneyDeltaInBaseCurrency" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "bonusMoneyDelta" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "totalBalanceAfter" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "wrd" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: wageringRequirementDelta"
+    },
+    "wra" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: wageringRequirementAfter"
+    },
+    "rba" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: realMoneyBalanceAfter"
+    },
+    "fba" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: forfeitedBonusAmount"
+    },
+    "id" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletId"
+    },
+    "swtId" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletTransactionId"
+    },
+    "pid" : {
+      "type" : "string",
+      "description" : "Logical variable name: playerId"
+    },
+    "fbabc" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: forfeitedBonusAmountInBaseCurrency"
+    }
+  },
+  "definitions" : {
+    "Cash" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "a" : {
+          "type" : "number"
+        },
+        "c" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "metadata": { 
+	"eventPayloadTypeAlias": 34
+  },
+  "title" : "sw.PlayerMigratedToSeamlessWalletEvent",
+  "type" : "object",
+  "additionalProperties" : false,
+  "properties" : {
+    "rb" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: realBalance"
+    },
+    "be" : {
+      "type" : "number",
+      "description" : "Logical variable name: bonusExpiryTime"
+    },
+    "bb" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: bonusBalance"
+    },
+    "id" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletId"
+    },
+    "pi" : {
+      "$ref" : "#/definitions/PaymentInformation",
+      "description" : "Logical variable name: paymentInformation"
+    },
+    "wr" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: wageringRequirement"
+    },
+    "pId" : {
+      "type" : "string",
+      "description" : "Logical variable name: playerId"
+    }
+  },
+  "definitions" : {
+    "Cash" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "a" : {
+          "type" : "number"
+        },
+        "c" : {
+          "type" : "string"
+        }
+      }
+    },
+    "PaymentInformation" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "paymentMethods" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/PaymentMethodInformation"
+          }
+        },
+        "paymentTransactions" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/PaymentTransactionInformation"
+          }
+        }
+      }
+    },
+    "PaymentMethodInformation" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "paymentMethodId" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "string"
+        },
+        "maskedAccount" : {
+          "type" : "string"
+        },
+        "lastUsedTime" : {
+          "type" : "number"
+        },
+        "deleted" : {
+          "type" : "boolean"
+        }
+      },
+      "required" : [ "deleted" ]
+    },
+    "PaymentTransactionInformation" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "paymentTransactionId" : {
+          "type" : "string"
+        },
+        "transactionAmount" : {
+          "$ref" : "#/definitions/Cash"
+        },
+        "fee" : {
+          "$ref" : "#/definitions/Cash"
+        },
+        "balanceAfter" : {
+          "$ref" : "#/definitions/Cash"
+        },
+        "balanceAfterRollback" : {
+          "$ref" : "#/definitions/Cash"
+        },
+        "rollbackTimeStamp" : {
+          "type" : "number"
+        },
+        "paymentMethodId" : {
+          "type" : "string"
+        },
+        "provider" : {
+          "type" : "string"
+        },
+        "timestamp" : {
+          "type" : "number"
+        },
+        "transactionType" : {
+          "type" : "string",
+          "enum" : [ "Deposit", "QuickDeposit", "WithdrawalRequested", "WithdrawalCancelled", "WithdrawalRejectedByMerchant", "WithdrawalRejectedByPSP", "DepositReversed", "WithdrawalReversed" ]
+        },
+        "pending" : {
+          "type" : "boolean"
+        }
+      },
+      "required" : [ "pending" ]
+    }
+  }
+}

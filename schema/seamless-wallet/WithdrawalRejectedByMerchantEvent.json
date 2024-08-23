@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "metadata": { 
+	"eventPayloadTypeAlias": 31
+  },
+  "title" : "sw.WithdrawalRejectedByMerchantEvent",
+  "type" : "object",
+  "additionalProperties" : false,
+  "properties" : {
+    "seamlessWalletTransactionId" : {
+      "type" : "string"
+    },
+    "realMoneyDeltaInBaseCurrency" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "realMoneyDelta" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "totalBalanceAfter" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "wa" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: withdrawalAmount"
+    },
+    "wra" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: wageringRequirementAfter"
+    },
+    "ctId" : {
+      "type" : "string",
+      "description" : "Logical variable name: cancelledWithdrawalTransactionId"
+    },
+    "wabc" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: withdrawalAmountInBaseCurrency"
+    },
+    "rba" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: realMoneyBalanceAfter"
+    },
+    "bba" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: bonusMoneyBalanceAfter"
+    },
+    "id" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletId"
+    },
+    "rr" : {
+      "type" : "string",
+      "description" : "Logical variable name: rejectionReason"
+    },
+    "ptId" : {
+      "type" : "string",
+      "description" : "Logical variable name: paymentTransactionId"
+    },
+    "pid" : {
+      "type" : "string",
+      "description" : "Logical variable name: playerId"
+    },
+    "esc" : {
+      "type" : "string",
+      "description" : "Logical variable name: externalStatusCode"
+    }
+  },
+  "definitions" : {
+    "Cash" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "a" : {
+          "type" : "number"
+        },
+        "c" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "metadata": { 
+	"eventPayloadTypeAlias": 64
+  },
+  "title" : "sw.SimpleWagerLimitCreatedEvent",
+  "type" : "object",
+  "additionalProperties" : false,
+  "properties" : {
+    "id" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletId"
+    },
+    "pId" : {
+      "type" : "string",
+      "description" : "Logical variable name: playerId"
+    }
+  }
+}

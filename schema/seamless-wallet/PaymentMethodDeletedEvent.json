@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "metadata": { 
+	"eventPayloadTypeAlias": 18
+  },
+  "title" : "sw.PaymentMethodDeletedEvent",
+  "type" : "object",
+  "additionalProperties" : false,
+  "properties" : {
+    "pmId" : {
+      "type" : "string",
+      "description" : "Logical variable name: paymentMethodId"
+    },
+    "id" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletId"
+    },
+    "pid" : {
+      "type" : "string",
+      "description" : "Logical variable name: playerId"
+    }
+  }
+}

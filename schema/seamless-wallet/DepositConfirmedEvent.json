@@ -1,0 +1,99 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "metadata": { 
+	"eventPayloadTypeAlias": 10
+  },
+  "title" : "sw.DepositConfirmedEvent",
+  "type" : "object",
+  "additionalProperties" : false,
+  "properties" : {
+    "seamlessWalletTransactionId" : {
+      "type" : "string"
+    },
+    "realMoneyDeltaInBaseCurrency" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "realMoneyDelta" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "totalBalanceAfter" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "da" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: depositAmount"
+    },
+    "fbc" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: feeInBaseCurrency"
+    },
+    "rba" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: realMoneyBalanceAfter"
+    },
+    "f" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: fee"
+    },
+    "bba" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: bonusMoneyBalanceAfter"
+    },
+    "id" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletId"
+    },
+    "ep" : {
+      "type" : "string",
+      "description" : "Logical variable name: executionProvider"
+    },
+    "p" : {
+      "type" : "string",
+      "description" : "Logical variable name: provider"
+    },
+    "wra" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: wageringRequirementAfter"
+    },
+    "dabc" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: depositAmountInBaseCurrency"
+    },
+    "pmId" : {
+      "type" : "string",
+      "description" : "Logical variable name: paymentMethodId"
+    },
+    "elapc" : {
+      "type" : "boolean",
+      "description" : "Logical variable name: excludeLimitsAndPermissionsCheck"
+    },
+    "ptId" : {
+      "type" : "string",
+      "description" : "Logical variable name: depositTransactionId"
+    },
+    "dt" : {
+      "type" : "string",
+      "enum" : [ "Normal", "Quick" ],
+      "description" : "Logical variable name: depositType"
+    },
+    "pid" : {
+      "type" : "string",
+      "description" : "Logical variable name: playerId"
+    }
+  },
+  "required" : [ "excludeLimitsAndPermissionsCheck" ],
+  "definitions" : {
+    "Cash" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "a" : {
+          "type" : "number"
+        },
+        "c" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

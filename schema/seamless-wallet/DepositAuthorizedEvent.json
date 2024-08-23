@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "metadata": { 
+	"eventPayloadTypeAlias": 9
+  },
+  "title" : "sw.DepositAuthorizedEvent",
+  "type" : "object",
+  "additionalProperties" : false,
+  "properties" : {
+    "paymentTransactionId" : {
+      "type" : "string"
+    },
+    "da" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: depositAmount"
+    },
+    "fbc" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: feeInBaseCurrency"
+    },
+    "p" : {
+      "type" : "string",
+      "description" : "Logical variable name: provider"
+    },
+    "dabc" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: depositAmountInBaseCurrency"
+    },
+    "f" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: fee"
+    },
+    "elapc" : {
+      "type" : "boolean",
+      "description" : "Logical variable name: excludeLimitsAndPermissionsCheck"
+    },
+    "id" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletId"
+    },
+    "ptId" : {
+      "type" : "string",
+      "description" : "Logical variable name: depositTransactionId"
+    },
+    "dt" : {
+      "type" : "string",
+      "enum" : [ "Normal", "Quick" ],
+      "description" : "Logical variable name: depositType"
+    },
+    "pt" : {
+      "type" : "string",
+      "description" : "Logical variable name: paymentType"
+    },
+    "pid" : {
+      "type" : "string",
+      "description" : "Logical variable name: playerId"
+    }
+  },
+  "required" : [ "excludeLimitsAndPermissionsCheck" ],
+  "definitions" : {
+    "Cash" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "a" : {
+          "type" : "number"
+        },
+        "c" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

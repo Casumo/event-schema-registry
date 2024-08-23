@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "metadata": { 
+	"eventPayloadTypeAlias": 20
+  },
+  "title" : "sw.RealBalanceAdjustedManuallyEvent",
+  "type" : "object",
+  "additionalProperties" : false,
+  "properties" : {
+    "totalBalanceAfter" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "r" : {
+      "type" : "string",
+      "description" : "Logical variable name: reason"
+    },
+    "rd" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: realMoneyDelta"
+    },
+    "rdbc" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: realMoneyDeltaInBaseCurrency"
+    },
+    "wra" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: wageringRequirementAfter"
+    },
+    "rba" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: realMoneyBalanceAfter"
+    },
+    "elapc" : {
+      "type" : "boolean",
+      "description" : "Logical variable name: excludeLimitsAndPermissionsCheck"
+    },
+    "swtId" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletTransactionId"
+    },
+    "id" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletId"
+    },
+    "bba" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: bonusMoneyBalanceAfter"
+    },
+    "pid" : {
+      "type" : "string",
+      "description" : "Logical variable name: playerId"
+    }
+  },
+  "required" : [ "excludeLimitsAndPermissionsCheck" ],
+  "definitions" : {
+    "Cash" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "a" : {
+          "type" : "number"
+        },
+        "c" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

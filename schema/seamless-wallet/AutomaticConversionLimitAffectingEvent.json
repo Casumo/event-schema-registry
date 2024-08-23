@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "metadata": { 
+	"eventPayloadTypeAlias": null
+  },
+  "title" : "sw.AutomaticConversionLimitAffectingEvent",
+  "type" : "object",
+  "additionalProperties" : false,
+  "properties" : {
+    "automaticConversionLimit" : {
+      "$ref" : "#/definitions/Cash"
+    }
+  },
+  "definitions" : {
+    "Cash" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "a" : {
+          "type" : "number"
+        },
+        "c" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

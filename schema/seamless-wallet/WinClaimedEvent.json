@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "metadata": { 
+	"eventPayloadTypeAlias": 46
+  },
+  "title" : "sw.WinClaimedEvent",
+  "type" : "object",
+  "additionalProperties" : false,
+  "properties" : {
+    "gId" : {
+      "type" : "string",
+      "description" : "Logical variable name: gameId"
+    },
+    "owa" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: originalWinAmount"
+    },
+    "er" : {
+      "type" : "number",
+      "description" : "Logical variable name: exchangeRate"
+    },
+    "ejwa" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: exchangedJackpotWinAmount"
+    },
+    "grtId" : {
+      "type" : "string",
+      "description" : "Logical variable name: gameTransactionId"
+    },
+    "ojwa" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: originalJackpotWinAmount"
+    },
+    "id" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletId"
+    },
+    "grId" : {
+      "type" : "string",
+      "description" : "Logical variable name: gameRoundId"
+    },
+    "egr" : {
+      "type" : "boolean",
+      "description" : "Logical variable name: endsGameRound"
+    },
+    "ewa" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: exchangedWinAmount"
+    },
+    "pid" : {
+      "type" : "string",
+      "description" : "Logical variable name: playerId"
+    }
+  },
+  "required" : [ "endsGameRound" ],
+  "definitions" : {
+    "Cash" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "a" : {
+          "type" : "number"
+        },
+        "c" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

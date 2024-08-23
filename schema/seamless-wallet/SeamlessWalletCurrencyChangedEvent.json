@@ -1,0 +1,96 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "metadata": { 
+	"eventPayloadTypeAlias": 44
+  },
+  "title" : "sw.SeamlessWalletCurrencyChangedEvent",
+  "type" : "object",
+  "additionalProperties" : false,
+  "properties" : {
+    "realMoneyBalanceAfter" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "bonusMoneyBalanceAfter" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "wageringRequirementAfter" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "automaticConversionLimit" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "totalBalanceAfter" : {
+      "$ref" : "#/definitions/Cash"
+    },
+    "c" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletCurrency"
+    },
+    "prb" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: previousRealMoneyBalance"
+    },
+    "bb" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: bonusMoneyBalance"
+    },
+    "swtId" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletTransactionId"
+    },
+    "id" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletId"
+    },
+    "pc" : {
+      "type" : "string",
+      "description" : "Logical variable name: previousSeamlessWalletCurrency"
+    },
+    "pbacl" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: previousBonusMoneyAutomaticConversionLimit"
+    },
+    "rb" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: realMoneyBalance"
+    },
+    "er" : {
+      "type" : "number",
+      "description" : "Logical variable name: exchangeRate"
+    },
+    "bacl" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: bonusMoneyAutomaticConversionLimit"
+    },
+    "bwr" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: bonusMoneyWageringRequirement"
+    },
+    "pbb" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: previousBonusMoneyBalance"
+    },
+    "pbwr" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: previousBonusMoneyWageringRequirement"
+    },
+    "pid" : {
+      "type" : "string",
+      "description" : "Logical variable name: playerId"
+    }
+  },
+  "definitions" : {
+    "Cash" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "a" : {
+          "type" : "number"
+        },
+        "c" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

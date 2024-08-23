@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "metadata": { 
+	"eventPayloadTypeAlias": 66
+  },
+  "title" : "sw.MoneyLimitExceedingAttemptedEvent",
+  "type" : "object",
+  "additionalProperties" : false,
+  "properties" : {
+    "id" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletId"
+    },
+    "lt" : {
+      "type" : "string",
+      "description" : "Logical variable name: limitType"
+    },
+    "pId" : {
+      "type" : "string",
+      "description" : "Logical variable name: playerId"
+    }
+  }
+}

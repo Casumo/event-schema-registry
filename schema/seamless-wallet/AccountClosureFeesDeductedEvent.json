@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "metadata": { 
+	"eventPayloadTypeAlias": 48
+  },
+  "title" : "sw.AccountClosureFeesDeductedEvent",
+  "type" : "object",
+  "additionalProperties" : false,
+  "properties" : {
+    "r" : {
+      "type" : "string",
+      "description" : "Logical variable name: reason"
+    },
+    "rdbc" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: realMoneyDeltaInBaseCurrency"
+    },
+    "rmd" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: realMoneyDelta"
+    },
+    "wra" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: wageringRequirementAfter"
+    },
+    "rba" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: realMoneyBalanceAfter"
+    },
+    "id" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletId"
+    },
+    "bba" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: bonusMoneyBalanceAfter"
+    },
+    "swtId" : {
+      "type" : "string",
+      "description" : "Logical variable name: seamlessWalletTransactionId"
+    },
+    "tba" : {
+      "$ref" : "#/definitions/Cash",
+      "description" : "Logical variable name: totalBalanceAfter"
+    },
+    "pid" : {
+      "type" : "string",
+      "description" : "Logical variable name: playerId"
+    }
+  },
+  "definitions" : {
+    "Cash" : {
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "a" : {
+          "type" : "number"
+        },
+        "c" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}
